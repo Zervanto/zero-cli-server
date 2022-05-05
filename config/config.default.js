@@ -19,7 +19,10 @@ module.exports = appInfo => {
   config.middleware = [];
   config.mongose = {
     client: {
-      url: 'mongodb://127.0.0.1:7001/?gssapiServiceName=数据库汇总Db的名字'
+      url: 'mongodb://127.0.0.1/example',
+      options: {},
+      // mongoose global plugins, expected a function or an array of function and options
+      plugins: [],
     },
   };
   // add your user config here

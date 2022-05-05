@@ -6,7 +6,7 @@ class ProjectController extends Controller {
   // 获取项目/组件的代码模板
   getTemplate() {
     const { ctx } = this;
-    ctx.body = [{ a: 1 }];
+    ctx.body = ctx.model.User.find({});
   }
 }
 module.exports = ProjectController;
