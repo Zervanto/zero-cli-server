@@ -19,7 +19,7 @@ module.exports = appInfo => {
   config.middleware = [];
   config.mongose = {
     client: {
-      url: 'mongodb://127.0.0.1/example',
+      url: 'mongodb://127.0.0.1/admin',
       options: {},
       // mongoose global plugins, expected a function or an array of function and options
       plugins: [],
