@@ -4,8 +4,9 @@ module.exports = app => {
   const Schema = mongoose.Schema;
 
   const projectInfo = new Schema({
-    projectName: { type: String },
-    projectVersion: { type: String },
+    _id: String,
+    projectName: String,
+    projectVersion: String,
   });
 
   return mongoose.model('Project', projectInfo);

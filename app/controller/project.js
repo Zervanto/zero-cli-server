@@ -4,9 +4,19 @@ const Controller = require('egg').Controller;
 
 class ProjectController extends Controller {
   // 获取项目/组件的代码模板
-  getTemplate() {
+  async getTemplate(obj = {}) {
     const { ctx } = this;
-    ctx.body = ctx.model.User.find({});
+    // console.log(ctx.model);
+    try {
+      const data = await ctx.model.Project.find({}).lean();
+      ctx.body = {
+        res: data,
+      };
+
+      console.log('----------', data);
+    } catch (err) {
+      console.log(err);
+    }
   }
 }
 module.exports = ProjectController;
