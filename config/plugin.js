@@ -2,9 +2,7 @@
 
 /** @type Egg.EggPlugin */
 
-module.exports = {
-  mongoose: {
-    enable: true,
-    package: 'egg-mongoose',
-  },
+exports.mongoose = {
+  enable: true,
+  package: 'egg-mongoose',
 };

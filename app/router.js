@@ -6,6 +6,5 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
-  console.log(controller.project);
   router.get('/project/template', controller.project.getTemplate);
 };

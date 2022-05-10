@@ -5,10 +5,9 @@ const Controller = require('egg').Controller;
 class ProjectController extends Controller {
   // 获取项目/组件的代码模板
   async getTemplate(obj = {}) {
-    const { ctx } = this;
-    // console.log(ctx.model);
+    const { ctx, service } = this;
     try {
-      const data = await ctx.model.Project.find({}).lean();
+      const data = await service.project.getProjectTemplate(obj);
       ctx.body = {
         res: data,
       };

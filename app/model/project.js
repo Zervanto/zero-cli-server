@@ -3,11 +3,10 @@ module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
 
-  const projectInfo = new Schema({
-    _id: String,
-    projectName: String,
-    projectVersion: String,
+  const projectSchema = new Schema({
+    _id: { type: String },
+    projectName: { type: String },
+    projectVersion: { type: String },
   });
-
-  return mongoose.model('Project', projectInfo);
+  return mongoose.model('Project', projectSchema, 'project');
 };

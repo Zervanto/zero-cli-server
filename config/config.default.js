@@ -17,12 +17,13 @@ module.exports = appInfo => {
 
   // add your middleware config here
   config.middleware = [];
-  config.mongose = {
+  config.mongoose = {
     client: {
-      url: 'mongodb://admin:2022@127.0.0.1:27017/zero-cli',
+      url: 'mongodb://127.0.0.1:27017/zero-cli',
       options: {
         useNewUrlParser: true,
-        // useUnifiedTopology: true,
+        poolSize: 40,
+        useUnifiedTopology: true,
       },
       // mongoose global plugins, expected a function or an array of function and options
       plugins: [],
